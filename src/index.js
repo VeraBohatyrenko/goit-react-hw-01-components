@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import 'modern-normalize/modern-normalize.css';
-// import App from './App';
+import 'modern-normalize/modern-normalize.css';
+import App from './components/App/App';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root'),
-// );
-
-const painting = {};
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
 
 // ReactDOM.render(link, document.getElementById('root'));
