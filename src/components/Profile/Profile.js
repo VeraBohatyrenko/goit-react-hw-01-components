@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import s from '../Profile/Profile.module.css';
 
 const Profile = ({
   user: {
@@ -7,23 +8,23 @@ const Profile = ({
     tag,
     location,
     avatar,
-    stats: { followers, vievs, likes },
+    stats: { followers, views, likes },
   },
 }) => (
-  <div>
-    <img src={avatar} alt={name} />
+  <div className={s.title}>
+    <img className={s.avatar} src={avatar} alt={name} />
     <h2>{name}</h2>
     <p>@{tag}</p>
     <p>{location}</p>
 
-    <ul>
+    <ul className={s.list}>
       <li>
         <span>Followers</span>
         <span>{followers}</span>
       </li>
       <li>
         <span>Views</span>
-        <span>{vievs}</span>
+        <span>{views}</span>
       </li>
       <li>
         <span>Likes</span>
@@ -39,13 +40,7 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.arrayOf(
-      PropTypes.shape({
-        followers: PropTypes.number.isRequired,
-        vievs: PropTypes.number.isRequired,
-        likes: PropTypes.number.isRequired,
-      }),
-    ).isRequired,
+    stats: PropTypes.objectOf(PropTypes.number),
   }),
 };
 

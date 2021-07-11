@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import s from '../Statistics/Statistics.module.css';
 
 const Statistics = ({ title, stats }) => (
-  <section>
+  <section className={s.section}>
     {title && <h2>{title}</h2>}
-    <ul>
+    <ul className={s.list}>
       {stats.map(({ id, label, percentage }) => (
         <li key={id}>
           <span> {label}</span>

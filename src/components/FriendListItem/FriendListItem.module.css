@@ -1,0 +1,29 @@
+.item {
+  display: grid;
+  place-items: center;
+  margin: 10px;
+  padding-top: 10px;
+  width: 300px;
+  height: 100px;
+  box-shadow: 0 0 1em;
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.item::marker {
+  content: '\2B24';
+}
+
+.item__success {
+  composes: item;
+  color: green;
+}
+
+.item__error {
+  composes: item;
+  color: red;
+}
+
+/* .name {
+  font-size: 50px;
+} */
